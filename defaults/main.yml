@@ -1,0 +1,3 @@
+---
+mr_path_to_roles: "{{ lookup('config', 'DEFAULT_ROLES_PATH') | first }}"
+mr_md_filename: README.md

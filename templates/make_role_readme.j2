@@ -1,0 +1,70 @@
+#jinja2: lstrip_blocks:True, keep_trailing_newline:True, trim_blocks:True
+{#
+WIP
+#}
+Role Name: **{{ mr_role_name }}**
+=========
+
+{% if mr.description is defined %}{{ mr.description }}{% endif %}
+
+
+---
+Requirements
+------------
+
+{% if mr.requirements is defined %}{{ mr.requirements }}{% endif %}
+
+
+---
+Role Variables
+--------------
+{% if mr.role_variables is defined %}
+| Variable     | required    | default  | choices    | comments |
+| ------------- |-------------| ---------|----------- |--------- |
+{% for v in mr.role_variables %}
+| {{ v.name }} | 
+{%- if v.required != None %} {{ v.required | replace('True','yes') | replace('False','no') }} {% endif %}|
+{%- if v.default != None %} {{ v.default | replace('True','yes') | replace('False','no') }} {% endif %}|
+{%- if v.choices != None %} <ul>{% for c in v.choices %}<li>{{ c }}</li>{% endfor %}</ul>{% endif %} |
+{%- if v.comments != None %} {{ v.comments }} {% endif %}|
+{% endfor %}
+{% endif %}
+
+
+---
+Dependencies
+------------
+
+{% if mr.requirements is defined %}{{ mr.dependencies }}{% endif %}
+
+
+---
+Example Playbook{% if mr.example_playbooks is defined%}{% if mr.example_playbooks | length > 1 %}s{% endif %}{% endif %}
+
+----------------
+{% if mr.example_playbook_text is defined %}{{ mr.example_playbook_text }}{% endif %}
+
+
+{% if mr.example_playbooks is defined %}
+{% for example in mr.example_playbooks %}
+
+### {{ example.description }}
+```YAML
+{{ example.code_block }}
+```
+{% endfor %}
+{% endif %}
+
+
+---
+License
+-------
+
+{% if mr.license is defined %}{{ mr.license }}{% endif %}
+
+
+---
+Author Information
+------------------
+
+{% if mr.author is defined %}{{ mr.author }}{% endif %}

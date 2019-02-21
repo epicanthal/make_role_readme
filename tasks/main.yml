@@ -1,0 +1,9 @@
+---
+- name: include variables from meta/readme.yml
+  include_vars:
+    file: "{{ mr_path_to_roles }}/{{ mr_role_name }}/meta/readme.yml"
+
+- name: generate READM.md
+  template:
+    src: make_role_readme.j2
+    dest: "{{ mr_path_to_roles }}/{{ mr_role_name }}/{{ mr_md_filename }}"
