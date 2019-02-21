@@ -27,14 +27,14 @@ mr:
       default: "first path in roles_path"
       choices:
       comments: >-
-        The path to your roles.  See how DEFAULT_ROLES_PATH
-        is used in default/main.yml
+        The path to your roles.  [DEFAULT_ROLES_PATH](https://docs.ansible.com/ansible/latest/reference_appendices/config.html#default-roles-path)
+        is used in defaults/main.yml
     - name: mr_md_filename
       required: yes
       default: README.md
       choices:
       comments: The name of the markdown file to be generated.  
-    - name: mr_role_names
+    - name: mr_role_name
       required: yes
       default:
       choices:
