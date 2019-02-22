@@ -1,0 +1,42 @@
+---
+mr:
+  license:
+  author:
+  description: Your Description
+  requirements: Role Requirements
+
+  role_variables:
+    - name: var_1
+      required: yes
+      default: some_value
+      choices: [value_1, value_2, value_3]
+      comments: Values 1,2,3 are your choices
+    - name: var_2
+      required: no
+      default:
+      choices: []
+      comments: Not required, no default value, no specific choices for the value.
+    - name: var_3
+      required: no
+      default:
+      choices: []
+      comments:
+
+  dependencies: None
+
+  example_playbook_text:
+
+  example_playbooks:
+    - description: Put some explanation text here.
+      code_block: >-
+        - name: my role
+          include_role:
+            name: my_role
+
+    - description: Another sample
+      code_block: >-
+        - name: run my role with var_1
+          include_role:
+            name: my_role
+          vars:
+            var_1: value_1
