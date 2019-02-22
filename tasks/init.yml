@@ -1,0 +1,21 @@
+---
+- name: assert that important variables are defined and/or contain acceptable values
+  assert:
+    that:
+      - mr_path_to_roles is defined
+      - mr_md_filename is defined
+      - mr_role_name is defined
+  tags: ['check_vars']
+
+- name: "Get status of '{{ mr_path_to_roles }}/{{ mr_role_name }}/meta/readme.yml'"
+  stat:
+    path: "{{ mr_path_to_roles }}/{{ mr_role_name }}/meta/readme.yml"
+  register: mr_path_check
+  tags: ['check_vars']
+
+- name: "assert that '{{ mr_path_to_roles }}/{{ mr_role_name }}/meta/readme.yml' exists"
+  assert:
+    that:
+      - mr_path_check.stat.exists
+      - mr_path_check.stat.readable
+  tags: ['check_vars']
