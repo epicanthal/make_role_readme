@@ -5,7 +5,7 @@ Generate Role markdown file (README.md) from meta data and a template. Inspired 
 - Goal:  Keep a somewhat consistent format for README.md and as
   Mr. Edelman states " if I didn’t end up creating this, I would
   have spent a ton of time manually creating tables in markdown
-  one at a time for each <role> I was building! And just imagine
+  one at a time for each [role] I was building! And just imagine
   making a small change like adding a row or column to each one!"
 
 - Notes:
