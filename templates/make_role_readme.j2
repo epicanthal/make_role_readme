@@ -1,8 +1,5 @@
 #jinja2: lstrip_blocks:True, keep_trailing_newline:True, trim_blocks:True
-{#
-WIP
-#}
-Role Name: **{{ mr_role_name }}**
+Ansible Role: **{{ mr_role_name }}**
 =========
 
 {% if mr.description is defined %}{{ mr.description }}{% endif %}
@@ -19,7 +16,7 @@ Requirements
 Role Variables
 --------------
 {% if mr.role_variables is defined %}
-| Variable     | required    | default  | choices    | comments |
+| variable    | required    | default  | choices    | comments |
 | ------------- |-------------| ---------|----------- |--------- |
 {% for v in mr.role_variables %}
 | {{ v.name }} | 
