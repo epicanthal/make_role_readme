@@ -18,7 +18,7 @@ Role Variables
 {% if mr.role_variables is defined %}
 | variable    | required    | default  | choices    | comments |
 | ------------- |-------------| ---------|----------- |--------- |
-{% for v in mr.role_variables %}
+{% for v in mr.role_variables | sort(attribute='name') %}
 | {{ v.name }} | 
 {%- if v.required != None %} {{ v.required | replace('True','yes') | replace('False','no') }} {% endif %}|
 {%- if v.default != None %} {{ v.default | replace('True','yes') | replace('False','no') }} {% endif %}|
