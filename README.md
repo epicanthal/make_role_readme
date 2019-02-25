@@ -33,9 +33,9 @@ Role Variables
 --------------
 | variable    | required    | default  | choices    | comments |
 | ------------- |-------------| ---------|----------- |--------- |
-| mr_path_to_roles | yes | **_first path in roles_path_** | <ul></ul> | The path to your roles.  [DEFAULT_ROLES_PATH](https://docs.ansible.com/ansible/latest/reference_appendices/config.html#default-roles-path) is used in defaults/main.yml |
-| mr_md_filename | yes | README.md | <ul></ul> | The name of the markdown file to be generated. |
-| mr_role_name | yes || <ul></ul> | The name of the role. |
+| mr_md_filename |yes |README.md | |The name of the markdown file to be generated. |
+| mr_path_to_roles |yes |**_first path in roles_path_** | |The path to your roles.  [DEFAULT_ROLES_PATH](https://docs.ansible.com/ansible/latest/reference_appendices/config.html#default-roles-path) is used in defaults/main.yml |
+| mr_role_name |yes || |The name of the role. |
 
 
 ---
