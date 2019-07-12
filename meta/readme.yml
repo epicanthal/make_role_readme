@@ -28,7 +28,7 @@ mr:
           generate this README.md
 
   requirements: >-
-    Copy **_readme.yml_** skeleton to role meta/ directory for every
+    Copy **_[readme.yml](readme.yml)_** skeleton to role meta/ directory for every
     role.  Modify as necessary.
 
   role_variables:
@@ -112,3 +112,14 @@ mr:
               loop: "{{ '{{' }} mr_role_names }}"
               loop_control:
                 loop_var: mr_role_names_item
+
+  role_return_values:
+    - key: return_val_example_1
+      returned: when **_color_** == blue
+      description: >-
+        Value is available as a fact that can be accessed,
+        if and only if the value of **_color_** is blue.
+    - key: return_val_example_2
+      returned: always
+      description: >-
+        A fact that is always returned and can be accessed as needed.

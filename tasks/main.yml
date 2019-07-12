@@ -6,7 +6,7 @@
   include_vars:
     file: "{{ mr_path_to_roles }}/{{ mr_role_name }}/meta/readme.yml"
 
-- name: generate READM.md
+- name: "generate {{ mr_md_filename }} for role '{{ mr_role_name }}'"
   template:
     src: make_role_readme.j2
     dest: "{{ mr_path_to_roles }}/{{ mr_role_name }}/{{ mr_md_filename }}"

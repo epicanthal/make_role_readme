@@ -26,7 +26,7 @@ Generate Role markdown file (README.md) from meta data and a template. Inspired 
 Requirements
 ------------
 
-Copy **_readme.yml_** skeleton to role meta/ directory for every role.  Modify as necessary.
+Copy **_[readme.yml](readme.yml)_** skeleton to role meta/ directory for every role.  Modify as necessary.
 
 ---
 Role Variables
@@ -101,6 +101,15 @@ Maybe you want to place some extra text here to explain the following examples.
       loop_control:
         loop_var: mr_role_names_item
 ```
+
+
+---
+Return Values
+-------------
+| key   | returned    | description  |
+| ------|-------------| -------------|
+| return_val_example_1 |when **_color_** == blue |Value is available as a fact that can be accessed, if and only if the value of **_color_** is blue. |
+| return_val_example_2 |always |A fact that is always returned and can be accessed as needed. |
 
 
 ---
