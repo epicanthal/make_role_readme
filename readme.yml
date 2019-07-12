@@ -40,3 +40,11 @@ mr:
             name: my_role
           vars:
             var_1: value_1
+
+  role_return_values:
+    - key: fact_1
+      returned: always
+      description: something good to know
+    - key: fact_2
+      returned: when var_2 is True
+      description: more good info

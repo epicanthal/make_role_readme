@@ -104,6 +104,15 @@ Maybe you want to place some extra text here to explain the following examples.
 
 
 ---
+Return Values
+-------------
+| key   | returned    | description  |
+| ------|-------------| -------------|
+| return_val_example_1 |when **_color_** == blue |Value is available as a fact that can be accessed, if and only if the value of **_color_** is blue. |
+| return_val_example_2 |always |A fact that is always returned and can be accessed as needed. |
+
+
+---
 License
 -------
 
