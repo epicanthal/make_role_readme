@@ -54,6 +54,20 @@ Example Playbook{% if mr.example_playbooks is defined%}{% if mr.example_playbook
 
 
 ---
+{% if mr.role_return_values is defined %}
+Return Values
+-------------
+| key   | returned    | description  |
+| ------|-------------| -------------|
+{% for v in mr.role_return_values | sort(attribute='key') %}
+| {{ v.key }} |
+{%- if v.returned != None %}{{ v.returned }}{% endif %} |
+{%- if v.description != None %}{{ v.description }}{% endif %} |
+{% endfor %}
+
+
+---
+{% endif %}
 License
 -------
 
