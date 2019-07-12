@@ -28,7 +28,7 @@ mr:
           generate this README.md
 
   requirements: >-
-    Copy **_readme.yml_** skeleton to role meta/ directory for every
+    Copy **_[readme.yml](readme.yml)_** skeleton to role meta/ directory for every
     role.  Modify as necessary.
 
   role_variables:

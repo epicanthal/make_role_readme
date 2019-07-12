@@ -26,7 +26,7 @@ Generate Role markdown file (README.md) from meta data and a template. Inspired 
 Requirements
 ------------
 
-Copy **_readme.yml_** skeleton to role meta/ directory for every role.  Modify as necessary.
+Copy **_[readme.yml](readme.yml)_** skeleton to role meta/ directory for every role.  Modify as necessary.
 
 ---
 Role Variables
